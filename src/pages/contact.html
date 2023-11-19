@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francis's Portfolio</title>
+    <link rel="stylesheet" href="../styles/pages/contact.css">
+    <link rel="stylesheet" href="../styles/components/graphics.css">
+    <link rel="stylesheet" href="../styles/components/footer.css">
+    <link rel="stylesheet" href="../styles/components/header.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Genos:wght@200&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header component -->
+    <header>
+        <button class="dropbtn">Menu</button>
+        <nav class="nav-titles">
+            <a href="../index.html">Home</a>
+            <a href="./about.html">About Me</a>
+            <a href="./work-history.html">Work History</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./contact.html">Contact</a>
+        </nav>   
+    </header>
+    <main>
+        <h1>Contact Me</h1>
+        <!-- Form Component -->
+       <form action="https://formsubmit.co/frankiejuen33@gmail.com" method="POST">
+            <div class="form-section">
+                <label>First Name: </label>
+                <input type="text" name="name" class="form-input" required>
+            </div>
+            <div class="form-section">
+                <label>Last Name: </label>
+                <input type="text" name="name" class="form-input" required>
+            </div>
+            <div class="form-section">
+                <label>Email: </label>
+                <input type="email" name="email" class="form-input" required>
+            </div>
+            <div class="form-section">
+                <label>Subject: </label>
+                <input type="text" name="Subject" class="form-input" required>
+            </div>
+            <div class="form-section">
+                <label>Message: </label>
+                <textarea 
+                    rows="5" 
+                    class="form-input form-textarea" 
+                    type="text" 
+                    name="Message" 
+                    required >
+                </textarea>
+            </div>
+            <div class="btn-section">
+                <button id="submit">Send Message</button>
+            </div>
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/src/pages/thankyou.html" />
+       </form>
+    </main>
+    <!-- graphics component -->
+    <section class="background-graphics">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+        <div class="circle-5"></div>
+        <div class="circle-6"></div>
+        <div class="top-line"></div>
+        <div class="mid-line"></div>
+        <div class="bottom-line"></div>
+    </section>
+    <!-- Footer component -->
+    <footer>
+        <div class="social-media">
+            <a href="https://github.com/frankie3388" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="www.linkedin.com/in/francis-lam-60a6a979" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="../script/script.js"></script>
+</body>
+</html>

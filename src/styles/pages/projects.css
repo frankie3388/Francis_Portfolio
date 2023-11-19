@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .heading {
+  text-align: center;
+  align-items: center;
+}
+main .heading h1 {
+  color: var(--primary-color);
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  margin: 20px 0px 0px 0px;
+  text-shadow: 10px 10px 10px rgb(56, 56, 56);
+}
+main .blog-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .blog-list .blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+main .blog-list .blog .blog-title {
+  padding: 0px;
+  text-align: center;
+}
+main .blog-list .blog .blog-title a {
+  text-decoration: none;
+}
+main .blog-list .blog .blog-title a h2 {
+  color: var(--primary-color);
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+.project-description {
+  margin: 10px;
+  background-color: var(--text-box-color);
+  border-radius: 10px;
+  min-height: 270px;
+}
+.project-description p {
+  width: 600px;
+  color: var(--primary-color);
+  padding: 20px;
+  font-size: 1.2rem;
+  margin: 0px;
+}
+.project-description .fa-github {
+  font-size: 24px;
+  color: var(--primary-color);
+  margin: 15px;
+}
+
+@media screen and (max-width: 830px) {
+  .project-description p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  main .heading h1 {
+    font-size: 2.8rem;
+  }
+  main .blog-list .blog .blog-title {
+    text-align: center;
+  }
+  main .blog-list .blog .blog-title a h2 {
+    font-size: 1.2rem;
+  }
+  .project-description p {
+    width: 280px;
+    font-size: 1.1rem;
+  }
+}

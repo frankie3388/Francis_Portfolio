@@ -1,0 +1,41 @@
+@import './variables.css';
+
+footer {
+    padding: 16px;
+    font-size: 20px;
+  }
+  footer .social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+  }
+  footer .social-media a {
+    font-size: 24px;
+    color: var(--primary-color);
+    z-index: 0;
+  }
+  
+  @media screen and (max-width: 1400px) {
+    footer {
+      padding: 16px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    footer .social-media a {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+  }
+  @media screen and (max-width: 600px) {
+    footer {
+      padding: 16px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    footer .social-media a {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+  }

@@ -1,0 +1,182 @@
+@import './variables.css';
+
+@keyframes blur-transition {
+  0% {filter: blur(8px); -webkit-filter: blur(8px);}
+  50% {filter: blur(2px); -webkit-filter: blur(2px);}
+  100% {filter: blur(8px); -webkit-filter: blur(8px);}
+}
+
+@keyframes move-left-right {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20px); /* Adjust the value as needed for the desired movement */
+  }
+}
+
+body .background-graphics {
+    position: fixed;
+    background-color: black;
+    /* color: white; */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+body .background-graphics .circle-1 {
+    background-image: linear-gradient(rgba(255, 39, 39, 0.541), rgba(255, 0, 0, 0));
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: 
+      blur-transition 10s ease-in-out infinite, 
+      move-left-right 10s ease-in-out infinite;
+  }
+  body .background-graphics .circle-2 {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(27, 172, 218, 0.6));
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+    left: 500px;
+    top: -200px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: 
+      blur-transition 30s ease-in-out infinite, 
+      move-left-right 30s ease-in-out infinite;
+  }
+  body .background-graphics .circle-3 {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(220, 151, 47, 0.6));
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    position: absolute;
+    right: -100px;
+    top: -200px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    /* animation: 
+      blur-transition 20s ease-in-out infinite, 
+      move-left-right 20s ease-in-out infinite; */
+  }
+  body .background-graphics .circle-4 {
+    background-image: linear-gradient(rgba(255, 0, 0, 0), rgba(64, 138, 81, 0.6));
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    position: absolute;
+    left: -100px;
+    bottom: -150px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    /* animation: 
+      blur-transition 25s ease-in-out infinite, 
+      move-left-right 25s ease-in-out infinite; */
+  }
+  body .background-graphics .circle-5 {
+    background-image: linear-gradient(rgba(97, 64, 138, 0.6), rgba(182, 61, 61, 0.1));
+    width: 850px;
+    height: 850px;
+    border-radius: 50%;
+    position: absolute;
+    left: 550px;
+    bottom: -200px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: 
+      blur-transition 15s ease-in-out infinite, 
+      move-left-right 15s ease-in-out infinite;
+  }
+  body .background-graphics .circle-6 {
+    background-image: linear-gradient(rgba(151, 97, 16, 0.6), rgba(240, 232, 30, 0));
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+    right: -100px;
+    bottom: -150px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: 
+      blur-transition 10s ease-in-out infinite, 
+      move-left-right 10s ease-in-out infinite;
+  }
+  body .background-graphics .top-line {
+    position: absolute;
+    left: 130px;
+    top: 0px;
+    width: 100px;
+    height: 300px;
+    border-left: 10px solid var(--primary-color);
+  }
+  body .background-graphics .bottom-line {
+    position: absolute;
+    left: 130px;
+    bottom: 0px;
+    width: 100px;
+    height: 300px;
+    border-left: 10px solid var(--primary-color);
+  }
+
+
+  @media screen and (max-width: 600px) {
+    body .background-graphics .circle-1 {
+      width: 300px;
+      height: 300px;
+      left: -50px;
+      top: -40px;
+    }
+    body .background-graphics .circle-2 {
+      width: 380px;
+      height: 380px;
+      left: 200px;
+      top: 200px;
+    }
+    body .background-graphics .circle-3 {
+      width: 350px;
+      height: 350px;
+      right: -100px;
+      top: -100px;
+    }
+    body .background-graphics .circle-4 {
+      width: 400px;
+      height: 400px;
+      left: -50px;
+      bottom: 250px;
+    }
+    body .background-graphics .circle-5 {
+      width: 390px;
+      height: 390px;
+      left: -70px;
+      bottom: -30px;
+    }
+    body .background-graphics .circle-6 {
+      width: 380px;
+      height: 380px;
+      right: -150px;
+      bottom: -50px;
+    }
+    body .background-graphics .top-line {
+      position: absolute;
+      left: 30px;
+      top: 0px;
+      width: 100px;
+      height: 300px;
+      border-left: 5px solid var(--primary-color);
+    }
+    body .background-graphics .bottom-line {
+      position: absolute;
+      left: 30px;
+      bottom: 0px;
+      width: 100px;
+      height: 300px;
+      border-left: 5px solid var(--primary-color);
+    }
+  }

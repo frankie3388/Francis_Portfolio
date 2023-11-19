@@ -1,0 +1,115 @@
+@import '../components/variables.css';
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+main .main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+main .main-section .introduction {
+  width: 550px;
+  flex: wrap;
+  margin: 0 20px 20px 180px;
+}
+main .main-section .introduction .intro-text {
+  color: var(--primary-color);
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+main .main-section .introduction .about_me-link {
+  text-decoration: none;
+}
+main .main-section .introduction .about_me-link .name-text {
+  color: transparent;
+  position: relative;
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 100px;
+  border-bottom: 10px solid var(--primary-color);
+  -webkit-text-stroke: 0.01px white;
+  text-transform: uppercase;
+}
+main .main-section .introduction .about_me-link .name-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #ff9535;
+  -webkit-text-stroke: 0px white;
+  border-right: 2px solid #ff9535;
+  overflow: hidden;
+  animation: animate 5s linear 3;
+}
+
+/* Animation for 'Francis Lam' heading */
+@keyframes animate {
+  0%, 10%, 100%
+  {width: 0;}
+  70%, 90%
+  {width: 60%}
+}
+
+@media screen and (max-width: 1580px) {
+  body main .main-section {
+    justify-content: center;
+  }
+  main .main-section .introduction {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main .main-section .introduction {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main .main-section .introduction {
+    margin-left: 100px;
+  }
+  main .main-section .introduction .intro-text {
+    font-size: 1.5rem;
+  }
+  main .main-section .introduction .about_me-link .name-text {
+    font-size: 4rem;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  main {
+    margin-bottom: 150px;
+  }
+  main .main-section {
+    justify-content: center;
+  }
+  main .main-section .introduction {
+    width: 200px;
+    margin: 0 20px 20px 20px;
+  }
+  main .main-section .introduction .intro-text {
+    font-size: 1.2rem;
+  }
+  main .main-section .introduction .about_me-link .name-text {
+    font-size: 28px;
+    border-bottom: 5px solid var(--primary-color);
+    margin-bottom: 30px;
+  }
+}

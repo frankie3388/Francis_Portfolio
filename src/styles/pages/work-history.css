@@ -1,0 +1,75 @@
+@import '../components/variables.css';
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  
+  main .main-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  main .main-section .about-text {
+    color: var(--primary-color);
+    font-family: "Genos", sans-serif;
+    font-family: "Roboto", sans-serif;
+    width: 500px;
+    margin-right: 180px;
+    margin-left: 180px;
+  }
+  main .main-section .about-text h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-shadow: var(--white-text-shadow);
+  }
+  main .main-section .about-text p {
+    font-size: 1.5rem;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    main .main-section .about-text {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    main .main-section .about-text h1 {
+        font-size: 4.5rem;
+        text-align: center;
+      }
+      main .main-section .about-text p {
+        font-size: 1.3rem;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        background-color: var(--text-box-color);
+      }
+  }
+
+
+  @media screen and (max-width: 600px) {
+    main .main-section .about-text {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    main .main-section .about-text h1 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    main .main-section .about-text p {
+      font-size: 1rem;
+      margin-bottom: 0px;
+      border-radius: 10px;
+      background-color: var(--text-box-color);
+    }
+  }
+
+
+  

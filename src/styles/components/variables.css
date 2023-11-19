@@ -1,0 +1,10 @@
+/* color variables */
+
+:root {
+    --white-text-shadow: 10px 10px 10px rgba(255, 255, 255, 0.74);
+    --primary-color: white;
+    --text-box-color: rgba(0, 0, 0, 0.6352941176);
+    --header-hover-color: #fca603;
+    --form-textbox-shadow: 10px 10px 10px rgb(56, 56, 56);
+    --menu-font: 'Rubik', sans-serif;
+}

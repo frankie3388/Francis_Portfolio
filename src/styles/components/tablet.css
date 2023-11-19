@@ -1,0 +1,119 @@
+@import './variables.css';
+
+main section .samsung-tablet {
+    width: 650px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    margin: 30px;
+    box-shadow: 10px 10px 10px rgb(56, 56, 56);
+  }
+  main section .samsung-tablet:hover {
+    background-color: #252324;
+  }
+  main section .samsung-tablet .screen {
+    padding: 10px;
+    margin: 0px;
+  }
+  main section .samsung-tablet .camera-lens {
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+    box-sizing: border-box;
+  }
+  main section .samsung-tablet .camera-lens .lens-image {
+    width: 10px;
+    height: 10px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    main section .samsung-tablet {
+      width: 550px;
+    }
+    main section .samsung-tablet .screen {
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    main section .samsung-tablet {
+      width: 300px;
+    }
+    main section .samsung-tablet .screen {
+      padding: 7px;
+    }
+    main section .samsung-tablet .camera-lens .lens-image {
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  @keyframes color-change {
+    from {
+      color: #fca603;
+    }
+    to {
+      color: var(--primary-color);
+    }
+  }
+  main .main-section .samsung-tablet .screen {
+    margin: 10px 0px 10px 10px;
+    width: 600px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to top right, black, grey);
+  }
+  main .main-section .samsung-tablet .screen .resume {
+    color: var(--primary-color);
+    font-family: "Genos", sans-serif;
+    font-family: "Roboto", sans-serif;
+    animation: color-change;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 5rem;
+  }
+  main .main-section .samsung-tablet .camera-lens {
+    margin-left: 10px;
+  }
+  
+  @media screen and (max-width: 800px) {
+    main .main-section .samsung-tablet {
+      height: 300px;
+    }
+    main .main-section .samsung-tablet .screen {
+      height: 280px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    main .main-section .samsung-tablet {
+      width: 350px;
+      height: 200px;
+    }
+    main .main-section .samsung-tablet .screen {
+      width: 310px;
+      height: 180px;
+      border: 1px solid black;
+      border-radius: 10px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main .main-section .samsung-tablet .screen .resume {
+      color: var(--primary-color);
+      font-family: "Genos", sans-serif;
+      font-family: "Roboto", sans-serif;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-size: 2.5rem;
+    }
+  }

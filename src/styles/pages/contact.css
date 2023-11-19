@@ -1,0 +1,85 @@
+@import '../components/variables.css';
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main h1 {
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: var(--header-hover-color);
+  font-size: 5rem;
+  text-shadow: 10px 10px 10px rgb(56, 56, 56);
+}
+main form .form-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+main form .form-section label {
+  color: var(--primary-color);
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  margin-right: 30px;
+  font-size: 1.2rem;
+}
+main form .form-section .form-input {
+  width: 400px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid var(--text-box-color);
+  font-size: 1rem;
+  box-shadow: var(--form-textbox-shadow);
+  outline: none;
+}
+main form .form-section .form-input:focus {
+  box-shadow: 0 0 8px 3px var(--primary-color);
+}
+main form .form-section .form-input.form-textarea {
+  resize: none;
+}
+main form .btn-section {
+  text-align: center;
+}
+main form .btn-section #submit {
+  font-family: "Genos", sans-serif;
+  font-family: "Roboto", sans-serif;
+  width: 120px;
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  background-color: #205691;
+  color: var(--primary-color);
+  box-shadow: var(--form-textbox-shadow);
+}
+main form .btn-section #submit:hover {
+  cursor: pointer;
+  background-color: var(--header-hover-color);
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 600px) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+  main form .form-section {
+    display: flex;
+    flex-direction: column;
+  }
+  main form .form-section label {
+    font-size: 1rem;
+  }
+  main form .form-section .form-input {
+    width: 200px;
+    font-size: 0.8rem;
+  }
+}

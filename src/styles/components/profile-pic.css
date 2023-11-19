@@ -1,0 +1,74 @@
+@import './variables.css';
+
+main section .profile-pic {
+    width: 750px;
+    height: 750px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 30px;
+  }
+  main section .profile-pic:hover {
+    border: 10px solid var(--primary-color);
+  }
+  main section .profile-pic .screen {
+    padding: 10px;
+    margin: 0px;
+  }
+  main section .profile-pic .screen .link .my-pic {
+    display: block;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  @media screen and (max-width: 1580px) {
+    main section .profile-pic {
+      width: 700px;
+      height: 700px;
+    }
+    main section .profile-pic .screen {
+      padding: 10px;
+    }
+    main section .profile-pic .screen .link .my-pic {
+      width: 650px;
+      height: 650px;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    main section .profile-pic {
+      width: 550px;
+      height: 550px;
+    }
+    main section .profile-pic .screen {
+      padding: 10px;
+    }
+    main section .profile-pic .screen .link .my-pic {
+      width: 500px;
+      height: 500px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    main section .profile-pic {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    main section .profile-pic .screen {
+      padding: 7px;
+    }
+    main section .profile-pic .screen .link .my-pic {
+      width: 300px;
+      height: 300px;
+    }
+    main section .profile-pic .camera-lens .lens-image {
+      width: 7px;
+      height: 7px;
+    }
+  }
