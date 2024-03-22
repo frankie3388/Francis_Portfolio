@@ -23,73 +23,109 @@ main .blog-list {
   align-items: center;
   flex-wrap: wrap;
 }
-main .blog-list .blog {
+
+.card {
+  width: 80px;
+  border-radius: .75rem;
+  background-size: cover;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0 0 50px 15px #e0d648;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px 15px #48a8e0;
+}
+
+.card > .row {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card > .row > .icon {
+  background: #223;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-main .blog-list .blog .blog-title {
-  padding: 0px;
-  text-align: center;
-}
-main .blog-list .blog .blog-title a {
-  text-decoration: none;
-}
-main .blog-list .blog .blog-title a h2 {
-  color: var(--primary-color);
-  font-family: "Genos", sans-serif;
-  font-family: "Roboto", sans-serif;
-  margin-top: 25px;
-  margin-bottom: 0px;
-}
-.project-description {
-  margin: 10px;
-  background-color: var(--text-box-color);
-  border-radius: 10px;
-  min-height: 270px;
-}
-.project-description p {
-  width: 600px;
-  color: var(--primary-color);
-  padding: 20px;
-  font-size: 1.2rem;
-  margin: 0px;
-}
-.project-description .fa-github {
-  font-size: 24px;
-  color: var(--primary-color);
   margin: 15px;
 }
-.project-description .travel-diary-img {
-  height:300px;
-  border-radius: 30px;
+
+.card > .row > .description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  background: #223;
   padding: 20px;
-  display: block;
-  margin: auto;
+  margin-top: 20px;
+  overflow: hidden;
+  height: 480px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition-delay: .3s;
+  transition: all .3s ease;
+}
+.description a {
+  text-decoration: none;
+  color: white;
 }
 
-
-@media screen and (max-width: 830px) {
-  .project-description p {
-    font-size: 1.3rem;
-  }
+.description a:hover {
+  color: var(--header-hover-color);
 }
+
+.description p {
+  color: #b0b0ba;
+  padding-top: 5px;
+}
+
+.description h4 {
+  text-transform: uppercase;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label {
+  width: 700px;
+}
+
+input:checked + label .description {
+  opacity: 0.8 !important;
+  transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+  background-image: url('../../images/travel-diary.png');
+}
+.card[for="c2"] {
+  background-image: url('./img2.jpeg');
+}
+.card[for="c3"] {
+  background-image: url('./img3.jpeg');
+}
+.card[for="c4"] {
+  background-image: url('./img4.jpeg');
+}
+
 
 @media screen and (max-width: 650px) {
   main .heading h1 {
     font-size: 2.8rem;
-  }
-  main .blog-list .blog .blog-title {
-    text-align: center;
-  }
-  main .blog-list .blog .blog-title a h2 {
-    font-size: 1.2rem;
-  }
-  .project-description p {
-    width: 280px;
-    font-size: 1.1rem;
   }
 }

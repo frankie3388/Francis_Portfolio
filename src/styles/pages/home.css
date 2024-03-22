@@ -38,11 +38,33 @@ main .main-section .introduction .about_me-link .name-text {
   font-size: 5rem;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   border-bottom: 10px solid var(--primary-color);
   -webkit-text-stroke: 0.01px white;
   text-transform: uppercase;
+  transition: border-bottom-width 1.5s ease-in-out; /* Add transition property here */
 }
+main .main-section .introduction .about_me-link .name-text::before,
+main .main-section .introduction .about_me-link .name-text::after {
+  width: 0;
+  transition: width 2s ease-in-out; /* Add transition property here */
+}
+
+main .main-section .introduction .about_me-link .name-text::before {
+  left: 0;
+  border-bottom: 10px solid var(--header-hover-color);
+}
+
+main .main-section .introduction .about_me-link .name-text::after {
+  right: 0;
+  /* border-bottom: 10px solid var(--header-hover-color); */
+}
+
+main .main-section .introduction .about_me-link .name-text:hover::before,
+main .main-section .introduction .about_me-link .name-text:hover::after {
+  width: 100%;
+}
+
 main .main-section .introduction .about_me-link .name-text::before {
   content: attr(data-text);
   position: absolute;
@@ -55,6 +77,7 @@ main .main-section .introduction .about_me-link .name-text::before {
   border-right: 2px solid #ff9535;
   overflow: hidden;
   animation: animate 5s linear 3;
+  text-shadow: 5px 5px 8px #ffffff;
 }
 
 /* Animation for 'Francis Lam' heading */
