@@ -10,9 +10,6 @@ main section .profile-pic {
     border-radius: 50%;
     margin: 30px;
   }
-  main section .profile-pic:hover {
-    border: 10px solid var(--primary-color);
-  }
   main section .profile-pic .screen {
     padding: 10px;
     margin: 0px;
@@ -23,7 +20,25 @@ main section .profile-pic {
     height: 700px;
     border-radius: 50%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
+    transition: box-shadow 2s ease; /* Add transition */
+    box-shadow: 0 0 0 transparent; /* Set initial box shadow to transparent */
+  }
+  main section .profile-pic .screen .link .my-pic:hover {
+    box-shadow: 0 0 50px 15px #406af4; /* Adjusted box shadow on hover */
+  }
+  main section .profile-pic .hover-display-about {
+    position: absolute;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255);
+    pointer-events: none; /* This allows pointer events to pass through the element */
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 2s ease; /* Transition for opacity over 2 seconds */
+  }
+  main section .profile-pic:hover .hover-display-about {
+    opacity: 0.6;
+    color: rgba(255, 255, 255);
+    font-size: 2.5rem;
   }
   
   @media screen and (max-width: 1580px) {
